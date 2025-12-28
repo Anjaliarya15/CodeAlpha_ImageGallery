@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery: City vs Nature</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Image Gallery<br>
+    <small>City (Delhi) and Nature (Dehradun)</small>
+  </h2>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button class="active" onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature (Dehradun)</button>
+    <button onclick="filterImages('city')">City (Delhi)</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <img src="https://www.indiatravel.app/wp-content/uploads/2024/04/tapovan-ashram-dehradun.jpg" data-cat="nature">
+    <img src="https://assets.zeezest.com/blogs/PROD_Dehradun-Banner_1665399439827_thumb_1000.jpeg" data-cat="nature">
+
+    <img src="https://tse2.mm.bing.net/th/id/OIP.rfPn9GuVRQ23_tadkLeqbQHaFE?pid=Api&P=0&h=180" data-cat="city">
+    <img src="http://farm8.staticflickr.com/7358/9372606508_d1403df25c_c.jpg" data-cat="city">
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <span class="prev" onclick="changeImage(-1)">❮</span>
+    <img id="lightboxImg">
+    <span class="next" onclick="changeImage(1)">❯</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
